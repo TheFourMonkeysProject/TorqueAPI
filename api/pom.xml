@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.fourmonkeys</groupId>
+	<artifactId>api</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+    <packaging>war</packaging>
+
+	<name>api</name>
+	<description>Tourque API</description>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.1.4.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+    <groupId>com.stormpath.sdk</groupId>
+	    <artifactId>stormpath-sdk-api</artifactId>
+	    <version>1.0.RC2</version>
+	</dependency>
+	<dependency>
+	    <groupId>com.stormpath.sdk</groupId>
+	    <artifactId>stormpath-sdk-httpclient</artifactId>
+	    <version>1.0.RC2</version>
+	    <scope>runtime</scope>
+	</dependency>
+	<!-- This next runtime dependency is only necessary if you have
+	     a REST API and you want to secure it with OAuth: -->
+	<dependency>
+	    <groupId>com.stormpath.sdk</groupId>
+	    <artifactId>stormpath-sdk-oauth</artifactId>
+	    <version>1.0.RC2</version>
+	    <scope>runtime</scope>
+	</dependency>
+	</dependencies>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<start-class>Torque API.Application</start-class>
+		<java.version>1.7</java.version>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
